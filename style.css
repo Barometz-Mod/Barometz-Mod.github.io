@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+h1, h2, p {
+    font-family: "Grandstander", arial;
+    letter-spacing: -4px;
+    -ms-user-select: none;
+    user-select: none;
+
+    animation-name: disco-color;
+    animation-duration: 3520ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+h1 {
+    font-size: 10vw;
+}
+h2 {
+    font-size: 5vw;
+    font-weight: 400;
+}
+h2 span {
+    font-weight: 700;
+}
+p {
+    font-size: 2.5vw;
+    font-weight: 900;
+    padding: 0.35em;
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./image.png");
+    background-repeat: repeat;
+    background-position: center;
+    animation-name: animated-bg;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes animated-bg {
+    from { background-position: 0 0; }
+    to   { background-position: -60px -75px; }
+}
+@keyframes disco-color {
+    0%   { color: #FF8080; }
+    17%  { color: #FFFF80; }
+    33%  { color: #80FF80; }
+    50%  { color: #80FFFF; }
+    67%  { color: #8080FF; }
+    83%  { color: #FF80FF; }
+    100% { color: #FF8080; }
+}
