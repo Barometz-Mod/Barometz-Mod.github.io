@@ -9,8 +9,9 @@ body {
 }
 
 h1, h2, p {
+    text-align: center;
     font-family: "Grandstander", arial;
-    letter-spacing: -4px;
+    letter-spacing: -2px;
     -ms-user-select: none;
     user-select: none;
 
@@ -20,19 +21,22 @@ h1, h2, p {
     animation-timing-function: linear;
 }
 h1 {
-    font-size: 10vw;
+    font-size: max(10vw, 5em);
+    letter-spacing: -4px;
+    line-height: 1;
 }
 h2 {
-    font-size: 5vw;
+    font-size: max(5vw, 2em);
     font-weight: 400;
 }
 h2 span {
     font-weight: 700;
 }
 p {
-    font-size: 2.5vw;
+    font-size: max(2.5vw, 1em);
     font-weight: 900;
-    padding: 0.35em;
+    padding: 0.35em 0;
+    white-space: nowrap;
 }
 
 .center {
@@ -43,6 +47,12 @@ p {
     position: fixed;
     justify-content: center;
     align-items: center;
+
+    animation-name: pulse-scale;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
 }
 
 .display-bg {
@@ -69,4 +79,8 @@ p {
     67%  { color: #8080FF; }
     83%  { color: #FF80FF; }
     100% { color: #FF8080; }
+}
+@keyframes pulse-scale {
+    from { transform: scale(95%); }
+    to   { transform: scale(105%); }
 }
