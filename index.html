@@ -11,9 +11,13 @@
         @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Luckiest+Guy&display=swap')
     </style>
 </head>
-<body>
+<body onload="handleLoad()" >
     <main>
-        <div id="cover" onclick="handleClick()"></div>
+        <div id="cover" onclick="handleClick()">
+            <div id="spinner"></div>
+            <h3 id="spinner-loading">Loading...</h3>
+            <h3 id="spinner-loaded" style="display: none;">Click anywhere to continue.</h3>
+        </div>
         <div class="display-bg">
             <div class="center">
                 <h1>April Fools!</h1>
