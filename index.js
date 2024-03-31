@@ -13,6 +13,7 @@ function handleClick() {
     if (document.getElementById("spinner") != null) {
         return;
     } else {
+        document.title = "\u161B\u2050\u1550\u1437";
         document.getElementById("cover").remove();
         document.getElementById("audio").play();
     }
